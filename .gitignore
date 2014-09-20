@@ -28,9 +28,12 @@ index.php
 install.php
 update.php
 xmlrpc.php
-/includes
-/misc
-/modules
-/profiles
-/scripts
-/themes
+/www/includes
+/www/misc
+/www/modules
+/www/profiles
+/www/scripts
+/www/themes
+
+# Ignore the Backup directory
+backup
