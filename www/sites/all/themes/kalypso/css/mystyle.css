@@ -190,6 +190,19 @@ left: 1000px;
 
 /**** Isotope Animation ****/
 
+/** Hide images until loaded **/
+
+.page-artwork .view-artwork {
+  background-image: url('../images/throbber.gif');
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-artwork .view-artwork .view-content {
+  opacity: 0;
+}
+
 
 /* Line up multi-line options nicely */
 .bef-checkboxes .form-item, .bef-select-as-radios.form-radios .form-item {
