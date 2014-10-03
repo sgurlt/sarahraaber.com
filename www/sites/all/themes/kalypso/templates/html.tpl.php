@@ -32,6 +32,8 @@ if ( strpos(strtolower($_SERVER['HTTP_USER_AGENT']), 'webkit') !== false ) {
 var container = $('.view-artwork');
 var container2 = $('.view-artwork .view-content .field-content img');
 $(container2).imagesLoaded(function() {
+  // $('.page-artwork .view-artwork .view-content').css('opacity','1');
+  // $('.page-artwork .view-artwork ').css('background-image','none');
   $('.view-artwork').isotope({
     // options
     itemSelector : '.views-row', 
