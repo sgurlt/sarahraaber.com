@@ -193,10 +193,9 @@ left: 1000px;
 /** Hide images until loaded **/
 
 .page-artwork .view-artwork {
-  background-image: url('../images/throbber.gif');
-  background-size: 40px 40px;
+  background-image: url('../images/ajax-loader.gif');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 0;
 }
 
 .page-artwork .view-artwork .view-content {
@@ -404,7 +403,6 @@ padding: 15px 15px 0 0;
 }
 
 .view-artwork .views-row img {
-
  box-shadow: 2px 1px 2px #000;  
 }
 
@@ -431,3 +429,31 @@ padding: 15px 15px 0 0;
     position: absolute;
 }
 
+/** Mobile **/
+
+@media screen and (max-width: 768px) {
+  ul.ei-slider-thumbs {
+    max-width: 400px !important;
+  }
+  ul.ei-slider-thumbs li{
+    width: 85px !important;
+  }
+  #block-block-3 li {
+    display: none;
+  }
+  .view-artwork {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .view-artwork.container {
+    padding: 0px 0px;
+  }
+  #block-block-3 {
+    display: none;
+  }
+  .view-artwork.view-display-id-page_3 .views-row {
+    float: left;
+    width: 100%;
+    padding: 15px 0 0 0;
+  }
+}
