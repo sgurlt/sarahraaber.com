@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sraaber_content feature.
+ */
+
+include_once 'sraaber_content.features.inc';
