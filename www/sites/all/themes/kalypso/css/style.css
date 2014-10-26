@@ -1383,7 +1383,7 @@ ul.menu {
 }			
 /*Responsive Styles*/
 
-@media screen and (max-width: 1199px) { 
+/* @media screen and (max-width: 1199px) { 
 
   #panels {
     padding: 10px 40px;
@@ -1529,4 +1529,4 @@ ul.menu {
   .page_heading_text {
     font-size: 24px;
   }
-}
+} */

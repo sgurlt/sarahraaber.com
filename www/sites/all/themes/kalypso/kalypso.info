@@ -24,6 +24,8 @@ stylesheets[all][] = /css/sliders/elastic-image.css
 stylesheets[all][] = /css/sliders/nivo.css
 stylesheets[all][] = css/ie.css
 stylesheets[all][] = css/mystyle.css
+stylesheets[all][] = css/responsiv.css
+
 
 regions[content]        = Content
 regions[sidebar_first]  = First Sidebar
