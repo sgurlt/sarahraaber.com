@@ -40,8 +40,20 @@ if(pathname == '/artwork') {
       // options
       itemSelector : '.views-row', 
     });
+    // getTransform();
   });
 
+  // First approach for last row:
+  // function getTransform() {
+    // var results = $('.views-row.views-row-4').css('-webkit-transform').match(/matrix(?:(3d)\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))(?:, (\d+)), \d+\)|\(\d+(?:, \d+)*(?:, (\d+))(?:, (\d+))\))/)
+
+    // if(!results) return [0, 0, 0];
+    // if(results[1] == '3d') return results.slice(2,5);
+
+    // results.push(0);
+    // alert(results.slice(5, 6));
+  // }
+  
   $('#filters a').click(function(){
     var selector = $(this).attr('data-filter');
     container.isotope({ filter: selector });

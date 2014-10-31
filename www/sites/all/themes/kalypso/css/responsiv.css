@@ -30,14 +30,14 @@
   }
   
   .ei-title {
-	margin-bottom: -10px;  
+    margin-bottom: -10px;
   }
   
   .ei-title h3, .ei-title h2 {
     color: #333 !important;
   }
   #portfolio .span3, #portfolio .span4, #portfolio .span5 {
-	margin-bottom: 20px;  
+    margin-bottom: 20px;
   }
   
   #panels .span4 {
@@ -45,7 +45,7 @@
   }
   
   .mask {
-	display: none;  
+    display: none;
   }
  
   #clients .span2 {
@@ -58,7 +58,7 @@
   }
   
   header, .icons {
-	text-align: center;  
+    text-align: center;
   }
   
   .mobile-menu {
@@ -69,7 +69,7 @@
   }
   
   .meta-full {
-	display: none;  
+    display: none;
   }
   
   .meta-mobile {
@@ -85,7 +85,7 @@
   }
   
   #footer, #footer_menu {
-	text-align: center;  
+    text-align: center;
   }
   
   #footer .span2, #footer .span3, #footer .span5 {
@@ -95,17 +95,18 @@
 
 
 @media only screen and (max-width : 980px) {
-  .view-artwork {
+    /* Artwork */
+    .view-artwork {
     width: 714px;
   }
   .view-artwork .view-header ul#filters {
     width: 476px;
     height: 100px;
   }
-}
 
-@media only screen and (max-width : 960px) {
-  
+  /* Projects CONTINUE HERE !!*/
+
+
 }
 
 @media only screen and (max-width : 714px) {
