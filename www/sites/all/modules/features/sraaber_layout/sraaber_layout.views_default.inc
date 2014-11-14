@@ -32,6 +32,10 @@ function sraaber_layout_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = '[field_image_type]';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Content: Image (field_portfolio_image:fid) */
+  $handler->display->display_options['relationships']['field_portfolio_image_fid']['id'] = 'field_portfolio_image_fid';
+  $handler->display->display_options['relationships']['field_portfolio_image_fid']['table'] = 'field_data_field_portfolio_image';
+  $handler->display->display_options['relationships']['field_portfolio_image_fid']['field'] = 'field_portfolio_image_fid';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_portfolio_image']['id'] = 'field_portfolio_image';
   $handler->display->display_options['fields']['field_portfolio_image']['table'] = 'field_data_field_portfolio_image';
@@ -135,6 +139,11 @@ function sraaber_layout_views_default_views() {
   <li><a data-filter=".Digital" href="#">Digital</a></li>
   <li class="last"><a data-filter=".Scraps" href="#">Scraps</a></li>
 </ul>';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Image (field_portfolio_image:fid) */
+  $handler->display->display_options['relationships']['field_portfolio_image_fid']['id'] = 'field_portfolio_image_fid';
+  $handler->display->display_options['relationships']['field_portfolio_image_fid']['table'] = 'field_data_field_portfolio_image';
+  $handler->display->display_options['relationships']['field_portfolio_image_fid']['field'] = 'field_portfolio_image_fid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image Type */
   $handler->display->display_options['fields']['field_image_type']['id'] = 'field_image_type';
@@ -143,21 +152,43 @@ function sraaber_layout_views_default_views() {
   $handler->display->display_options['fields']['field_image_type']['label'] = '';
   $handler->display->display_options['fields']['field_image_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image_type']['element_label_colon'] = FALSE;
+  /* Field: File: Path */
+  $handler->display->display_options['fields']['uri']['id'] = 'uri';
+  $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['uri']['field'] = 'uri';
+  $handler->display->display_options['fields']['uri']['relationship'] = 'field_portfolio_image_fid';
+  $handler->display->display_options['fields']['uri']['label'] = '';
+  $handler->display->display_options['fields']['uri']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uri']['file_download_path'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_portfolio_image']['id'] = 'field_portfolio_image';
   $handler->display->display_options['fields']['field_portfolio_image']['table'] = 'field_data_field_portfolio_image';
   $handler->display->display_options['fields']['field_portfolio_image']['field'] = 'field_portfolio_image';
   $handler->display->display_options['fields']['field_portfolio_image']['label'] = '';
-  $handler->display->display_options['fields']['field_portfolio_image']['alter']['text'] = '<div class="element ">[field_portfolio_image]</div>';
+  $handler->display->display_options['fields']['field_portfolio_image']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_portfolio_image']['alter']['text'] = '<div class="element ">
+<a class="colorbox-load" href="[uri]" rel="gallery" title="[title]">
+[field_portfolio_image]
+</a>
+</div>';
   $handler->display->display_options['fields']['field_portfolio_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_portfolio_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_portfolio_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_portfolio_image']['settings'] = array(
     'picture_mapping' => 'artwork',
     'fallback_image_style' => '_original image_',
-    'image_link' => 'colorbox',
+    'image_link' => '',
     'colorbox_settings' => array(
-      'colorbox_group' => 'artwork',
+      'colorbox_group' => 'original_image',
       'colorbox_gallery' => 'post',
       'colorbox_gallery_custom' => '',
       'colorbox_caption' => 'auto',

@@ -1,7 +1,7 @@
 name = sraaber_layout
 core = 7.x
 package = sraaber
-version = 7.x-1.0
+version = 7.x-1.01
 project = sraaber_layout
 dependencies[] = better_exposed_filters
 dependencies[] = breakpoints
@@ -9,6 +9,7 @@ dependencies[] = ctools
 dependencies[] = image
 dependencies[] = manualcrop
 dependencies[] = picture
+dependencies[] = sg_photoswipe
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_slideshow
