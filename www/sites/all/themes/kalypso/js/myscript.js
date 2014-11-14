@@ -29,10 +29,21 @@ $(document).ready(function() {
 	$('ul#filters li a').click(function() {
 		$('ul#filters li.active').removeClass('active');
 		$(this).parent('li').addClass('active');
-	}); 
-	
-	
+	});
 
 
-
+    if ($(window).width() > 1200) {
+      // DO NOTHING
+    }
+    else {
+        $('.view-artwork .views-field-field-portfolio-image a').removeClass('colorbox-load');
+        $('.view-artwork .views-field-field-portfolio-image a').removeClass('init-colorbox-load-processed');
+        $('.view-artwork .views-field-field-portfolio-image a').removeClass('cboxElement');
+        $('.view-artwork .views-field-field-portfolio-image a').addClass('photoswipe');
+    }
 });
+
+document.addEventListener('DOMContentLoaded', function(){
+    Code.photoSwipe('.photoswipe', '.view-artwork');
+}, false);
+

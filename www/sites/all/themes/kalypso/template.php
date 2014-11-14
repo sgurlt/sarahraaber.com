@@ -17,6 +17,9 @@ function kalypso_preprocess_page(&$vars, $hook) {
   if($status == "404 Not Found") {      
     $vars['theme_hook_suggestions'][] = 'page__404';
   }
+  // We need to rebuild the scripts variable with the new script included.
+  $variables['scripts'] = drupal_get_js();
+
 }
 
 /* Allow sub-menu items to be displayed */
@@ -248,5 +251,48 @@ function kalypso_user_css() {
   echo "</style>";
   echo "<!-- End user defined CSS -->";	
 }
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function kalypso_preprocess_views_view(&$vars) {
+
+  // Uncomment the lines below to see variables you can use to target a view.
+  // This requires http://drupal.org/project/devel to be installed.
+//  dpm($vars['view']->name, 'view name');
+
+  // Hook view id specific functions.
+  // This is a super neato trick.
+  if (isset($vars['view']->name)) {
+    $function = 'preprocess_views_view__' . $vars['view']->name;
+    if (function_exists($function)) {
+      $function($vars);
+    }
+  }
+}
+
+/**
+ * Implements preprocess_views_view__VIEW().
+ */
+function preprocess_views_view__artwork(&$vars) {
+  $display_id = $vars['display_id'];
+  dpm($display_id);
+  $classes = &$vars['classes_array'];
+  $title_classes = &$vars['title_attributes_array']['class'];
+  $content_classes = &$vars['content_attributes_array']['class'];
+
+  // Uncomment the lines below to see variables you can use to target a view.
+  // This requires http://drupal.org/project/devel to be installed.
+  // dpm($vars['view']->name, 'view name');
+
+  switch ($display_id) {
+
+    // Call flexslider scripts.
+    case 'page_3':
+      libraries_load('photoswipe');
+      break;
+   }
+}
+
 
 ?>

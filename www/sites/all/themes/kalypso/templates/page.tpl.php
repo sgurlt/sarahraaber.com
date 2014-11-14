@@ -13,6 +13,13 @@
           <div class="row">
             <div id ="main_content_wrap" class="<?php if (theme_get_setting('page_layout') == 'sidebar_right') { echo "span6"; } else { echo "span10"; } ?>">
               <div id="main_content">
+                <?php
+                  global $user;
+                  // Check if the user has the 'editor' role.
+//                  if (in_array('administrator', $user->roles)) {
+//                    print $messages;
+//                  }
+                ?>
 	              <?php print render($title_prefix); ?>
 	              <?php print render($title_suffix); ?>
 	             	 

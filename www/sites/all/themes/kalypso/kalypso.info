@@ -5,7 +5,6 @@ engine = phptemplate
 
 
 scripts[] = js/jquery-1.8.2.min.js
-scripts[] = js/jquery.isotope.js
 scripts[] = bootstrap/js/bootstrap.js
 scripts[] = js/superfish.js
 scripts[] = js/hoverIntent.js
@@ -20,6 +19,7 @@ scripts[] = js/jquery.ui.totop.js
 scripts[] = js/easing.js
 scripts[] = js/myscript.js
 scripts[] = js/jquery.imagesloaded.js
+scripts[] = js/jquery.isotope.min.js
 stylesheets[all][] = /css/sliders/elastic-image.css
 stylesheets[all][] = /css/sliders/nivo.css
 stylesheets[all][] = css/ie.css

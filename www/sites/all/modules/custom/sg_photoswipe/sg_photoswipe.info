@@ -1,0 +1,4 @@
+name = Photoswipe librarie load
+description = Photoswipe librarie load
+core = 7.x
+package = custom

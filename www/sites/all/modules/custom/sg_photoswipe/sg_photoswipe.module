@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_libraries_info().
+ */
+function sg_photoswipe_libraries_info() {
+  $libraries = array();
+  $libraries['photoswipe'] = array(
+    'name' => 'Photoswipe',
+    'vendor url' => 'https://github.com/dimsemenov/PhotoSwipe',
+    'download url' => 'https://github.com/dimsemenov/PhotoSwipe/archive/master.zip',
+    'version callback' => 'short_circuit_version',
+    'files' => array(
+      'js' => array(
+        'lib/simple-inheritance.min.js',
+        'code-photoswipe-1.0.11.min.js',
+      ),
+      'css' => array(
+        'photoswipe.css'
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+
+/**
+ * Short-circuit the version argument.
+ */
+function short_circuit_version() {
+  return TRUE;
+}
