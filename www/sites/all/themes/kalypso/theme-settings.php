@@ -584,23 +584,23 @@ function kalypso_form_system_theme_settings_alter(&$form, &$form_state) {
       '#title' => '<div class="plus"></div><h3 class="options_heading">Social Icons</h3>',
     );
     
-      // Twitter Icon
-      $form['options']['footer']['social']['twitter_icon'] = array(
+      // Deviantart Icon
+      $form['options']['footer']['social']['deviantart_icon'] = array(
         '#type' => 'checkbox',
-        '#title' => 'Twitter Icon',
-        '#default_value' => theme_get_setting('twitter_icon'),
+        '#title' => 'Deviantart Icon',
+        '#default_value' => theme_get_setting('deviantart_icon'),
       );
       
-      // Twitter Icon URL
-      $form['options']['footer']['social']['twitter_url'] = array(
+      // Deviantart Icon URL
+      $form['options']['footer']['social']['deviantart_url'] = array(
         '#type' => 'textfield',
-        '#title' => 'Twitter URL',
-        '#default_value' => theme_get_setting('twitter_url'),
+        '#title' => 'Deviantart URL',
+        '#default_value' => theme_get_setting('deviantart_url'),
         '#size' => 10,
         '#maxlenght' => 10,
         '#states' => array (
           'invisible' => array(
-            'input[name="twitter_icon"]' => array('checked' => FALSE)
+            'input[name="deviantart_icon"]' => array('checked' => FALSE)
           )
         )
       );
