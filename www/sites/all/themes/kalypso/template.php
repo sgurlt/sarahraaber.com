@@ -258,10 +258,6 @@ function kalypso_user_css() {
  */
 function kalypso_preprocess_views_view(&$vars) {
 
-  // Uncomment the lines below to see variables you can use to target a view.
-  // This requires http://drupal.org/project/devel to be installed.
-//  dpm($vars['view']->name, 'view name');
-
   // Hook view id specific functions.
   // This is a super neato trick.
   if (isset($vars['view']->name)) {
@@ -277,14 +273,6 @@ function kalypso_preprocess_views_view(&$vars) {
  */
 function preprocess_views_view__artwork(&$vars) {
   $display_id = $vars['display_id'];
-  dpm($display_id);
-  $classes = &$vars['classes_array'];
-  $title_classes = &$vars['title_attributes_array']['class'];
-  $content_classes = &$vars['content_attributes_array']['class'];
-
-  // Uncomment the lines below to see variables you can use to target a view.
-  // This requires http://drupal.org/project/devel to be installed.
-  // dpm($vars['view']->name, 'view name');
 
   switch ($display_id) {
 
