@@ -230,7 +230,7 @@ left: 1000px;
 .page-artwork .view-artwork {
   background-image: url('../images/ajax-loader.gif');
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 5%;
 }
 
 .page-artwork .view-artwork .view-content {

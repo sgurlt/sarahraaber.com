@@ -151,6 +151,9 @@
   #widget_pager_bottom_projects-block .views-slideshow-pager-field-item {
     width: 48%;
   }
+  .page-artwork .view-artwork {
+    background-position: 50% 3%;
+  }
 }
 
 @media only screen and (max-width : 510px) {
@@ -237,5 +240,8 @@
   .view-artwork.view-display-id-page_3 .views-row {
     width: 90%;
     margin: 0 5%;
+  }
+  .page-artwork .view-artwork {
+    background-position: 50% 120px;
   }
 }
