@@ -76,24 +76,25 @@ function kalypso_field($variables) {
 
 
 /* Put Breadcrumbs in a ul li structure and add descending z-index style to each <a href> tag */
-function kalypso_breadcrumb($variables, $page) {
-  $count = '100';
-  $breadcrumb = $variables['breadcrumb'];
-
-  if (!empty($breadcrumb)) {
-   
-    foreach($breadcrumb as $value) {
-      $count = $count - 1;
-      $style = ' style="z-index:'.$count.';"';
-      $pos = strpos( $value, ">"); 
-      $temp1=substr($value,0,$pos);
-      $temp2=substr($value,$pos,$pos);
-      $crumbs .= $value.'&#8592; ';
-    }
-  
-  }
-  return $crumbs;
-}
+// sarahraaber.com does not have breadcrumbs
+//function kalypso_breadcrumb($variables, $page) {
+//  $count = '100';
+//  $breadcrumb = $variables['breadcrumb'];
+//
+//  if (!empty($breadcrumb)) {
+//
+//    foreach($breadcrumb as $value) {
+//      $count = $count - 1;
+//      $style = ' style="z-index:'.$count.';"';
+//      $pos = strpos( $value, ">");
+//      $temp1=substr($value,0,$pos);
+//      $temp2=substr($value,$pos,$pos);
+//      $crumbs .= $value.'&#8592; ';
+//    }
+//
+//  }
+//  return $crumbs;
+//}
 
 /* Add various META tags to HTML head. */
 function kalypso_preprocess_html(&$vars){

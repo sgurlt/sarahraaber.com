@@ -16,9 +16,9 @@
                 <?php
                   global $user;
                   // Check if the user has the 'editor' role.
-//                  if (in_array('administrator', $user->roles)) {
-//                    print $messages;
-//                  }
+                  if (in_array('administrator', $user->roles)) {
+                    print $messages;
+                  }
                 ?>
 	              <?php print render($title_prefix); ?>
 	              <?php print render($title_suffix); ?>

@@ -114,6 +114,9 @@
     float: none;
   }
 
+  .view-projects .field-slideshow {
+    padding-right: 0px !important;
+  }
   .view-projects .views-field-body {
     margin: 0 auto;
     width: 95%;
@@ -121,7 +124,7 @@
   .project_image {
     max-width: 980px;
     margin: 0 auto;
-    width: 480px;
+    width: 485px;
   }
   .view-projects {
     width: 100%;
@@ -131,7 +134,7 @@
   }
 
   .field-slideshow-slide, .field-slideshow-slide a, .field-slideshow-slide img {
-    width: 485px !important;
+    width: 480px !important;
     max-width: 485px !important;
   }
   .field-slideshow-controls .next {
