@@ -5,6 +5,10 @@
     padding: 0px;
   }
 
+  #main_title {
+    margin-top: 35px;
+  }
+
   /* Artwork */
   #toTop {
     display: none !important;
@@ -68,7 +72,7 @@
   .mobile-menu {
     display: block;  
   }
-  #menu {
+  #menu .navigation {
     display: none;  
   }
   
@@ -94,6 +98,49 @@
   
   #footer .span2, #footer .span3, #footer .span5 {
     margin-bottom: 15px;
+  }
+
+  /* Menu */
+  #menu-mobile {
+    display: block;
+  }
+
+  button.burger_button {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 2.125rem;
+    height: 2.125rem;
+    text-indent: -9999em;
+    border: 0 solid transparent;
+    background-color: #fff;
+    background-image: url('../images/buttons/mobile_nav.png');
+    background-position: 7px -30px;
+    background-repeat: no-repeat;
+    z-index: 100;
+  }
+  button:focus {
+    outline: none;
+  }
+  #main-menu-mobile {
+    height: 0;
+    overflow: hidden;
+    -moz-transition: height 0.5s linear;
+    -o-transition: height 0.5s linear;
+    -webkit-transition: mheight 0.5s linear;
+    transition: height 0.5s linear;
+  }
+  #main-menu-mobile.active {
+    height: 364px;
+  }
+  #main-menu-links {
+    position: relative;
+    top: 34px;
+    background: url("../images/section-head2.png") repeat scroll 0 0 transparent;
+    box-shadow: 0 0 1em 0.5em black;
+  }
+  #main-menu-links li {
+    padding: 0;
   }
 }
 

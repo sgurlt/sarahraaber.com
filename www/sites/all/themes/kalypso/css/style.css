@@ -1273,37 +1273,38 @@ html.overlay-open #vert_nav  {
   margin-bottom: 15px;
 }
 
-#menu.row {
+#menu.row, #menu-mobile.row {
 	margin-left: 0px !important; 
 	margin-top: -30px; 
 	margin-bottom: -1px;
 }
 
-#menu_wrap {
+#menu_wrap, #menu_wrap_mobile {
 	padding-top: 30px; 
 	margin-left: 0px;
 }
 
-#main-menu li {
+#main-menu li, #main-menu-mobile li {
 	list-style: none; 
 }
 
 
 
-#main-menu li a:hover, #main-menu .menu ul li a:hover  {
+#main-menu li a:hover, #main-menu .menu ul li a:hover,
+#main-menumobile li a:hover, #main-menu-mobile .menu ul li a:hover {
 	background: transparent;
 }
 
-#main-menu li li a.active {
+#main-menu li li a.active, #main-menu-mobile li li a.active {
 	color: #ccc;
 }
 
-#main-menu .menu li {
+#main-menu .menu li, #main-menu-mobile .menu li {
 	position: relative; 
 
 }
 
-#main-menu li a {
+#main-menu li a, #main-menu-mobile li a {
 	color: #949494;  
 	padding:15px 15px 15px 15px; 
 	font-family: 'Raleway', 
@@ -1314,23 +1315,23 @@ html.overlay-open #vert_nav  {
 	display: block;
 }
 
-#main-menu ul ul li a {
+#main-menu ul ul li a, #main-menu-mobile ul ul li a {
   padding: 0px 15px;
 }
 
-#main-menu ul ul {
+#main-menu ul ul, #main-menu-mobile ul ul {
 	width: 170px;
 }
 
-#main-menu li a:hover {
+#main-menu li a:hover, #main-menu-mobile li a:hover {
 	background: whitesmoke !important; 
 }
 
-#main-menu .menu li.first {
+#main-menu .menu li.first, #main-menu-mobile .menu li.first {
 	margin-left: 0px; 
 	border-left: none;
 }
-#main-menu .menu ul li {
+#main-menu .menu ul li, #main-menu-mobile .menu ul li {
 	padding: 7px; 
 	margin: 0; 
 	clear: both; 
@@ -1338,7 +1339,7 @@ html.overlay-open #vert_nav  {
 	border-bottom:1px solid #ECECEC;
 }
 
-#main-menu .menu ul li a {
+#main-menu .menu ul li a, #main-menu-mobile .menu ul li a {
   font-size: 13px; 
   text-transform: none;
   color: #333;

@@ -153,14 +153,14 @@ ul.ei-slider-thumbs {
 	text-align: center;
 }
 
-.view-artwork .view-header li a:hover{
+.view-artwork .view-header #filters li a:hover{
   color: #7100CC;
-	background: whitesmoke !important; 
+	background: whitesmoke;
 }
 
-.view-artwork .view-header li.active a {
-  color: #7100CC !important;
-	background: whitesmoke !important; 
+.view-artwork .view-header #filters li.active a {
+  color: #7100CC;
+	background: whitesmoke;
 }
 
 /**** Isotope filtering ****/
@@ -235,6 +235,7 @@ left: 1000px;
 
 .page-artwork .view-artwork .view-content {
   opacity: 0;
+  pointer-events: none;
 }
 
 
@@ -472,4 +473,9 @@ padding: 15px 15px 0 0;
     color: #949494;
     left: 60px;
     position: absolute;
+}
+
+/** Mobile Menu **/
+#menu-mobile {
+  display: none;
 }

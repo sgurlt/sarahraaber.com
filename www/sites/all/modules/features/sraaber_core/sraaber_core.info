@@ -1,0 +1,11 @@
+name = sraaber_core
+core = 7.x
+package = sraaber
+version = 7.x-1.0
+project = sraaber_core
+dependencies[] = site_verify
+dependencies[] = xmlsitemap
+dependencies[] = xmlsitemap_engines
+dependencies[] = xmlsitemap_menu
+dependencies[] = xmlsitemap_node
+features[features_api][] = api:2

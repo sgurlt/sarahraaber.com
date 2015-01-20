@@ -4,8 +4,30 @@ function kalypso_header($page){
 ?>
 
     <div class="container">
-      <div class="row">  
-        <div class="span2"> 
+      <div id="mainrow" class="row">
+			<!-- begin Mobile menu -->
+				<div id="menu-mobile" class="row">
+					<div id="main-menu-mobile" class="navigation">
+						<div id="menu_wrap_mobile">
+							<button class="burger_button"></button>
+							<?php print theme('links__system_main_menu', array(
+								'attributes' => array(
+									'id' => 'main-menu-links',
+									'class' => array('links', 'clearfix'),
+								),
+								'heading' => array(
+									'text' => t('Main menu'),
+									'level' => 'h2',
+									'class' => array('element-invisible'),
+								),
+							));
+							?>
+						</div>
+					</div>
+
+				</div>
+				<!-- end Mobile menu -->
+	<div class="span2">
           <div id="vert_nav">
           <header>
           <?php if (theme_get_setting('branding_type') == 'logo'): ?>
@@ -15,12 +37,14 @@ function kalypso_header($page){
           <?php endif; ?>
           
           <?php if (theme_get_setting('branding_type') == 'text'): ?>
-            <a href="<?php print base_path();?>">
+
             <div id="main_title">
-				<img class="signatur" src="/sites/default/files/signature_website.png" />
-              <!-- <h1 id="main_title_text"><?php print variable_get('site_name'); ?></h1> -->
-            </div>
-            </a>
+							<a href="<?php print base_path();?>">
+								<img class="signatur" src="/sites/default/files/signature_website.png" />
+								<!-- <h1 id="main_title_text"><?php print variable_get('site_name'); ?></h1> -->
+							</a>
+						</div>
+
           <?php endif; ?>
             <!-- begin menu -->
             <div id="menu" class="row">
@@ -60,7 +84,7 @@ function kalypso_header($page){
 	
 	  $('ul#quotes').quote_rotator();
 	
-	  $('#menu').mobileMenu();
+//	  $('#menu').mobileMenu();
 	  
 	  $("#google_map").fitMaps( {w: '100%', h:'370px'} ); 
 	 

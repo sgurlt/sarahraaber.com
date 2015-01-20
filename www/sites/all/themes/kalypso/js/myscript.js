@@ -32,6 +32,27 @@ $(document).ready(function() {
         $('.view-artwork .views-field-field-portfolio-image a').removeClass('cboxElement');
         $('.view-artwork .views-field-field-portfolio-image a').addClass('photoswipe');
     }
+
+
+	/* Mobile Nav */
+	function mobileNav() {
+		if ($(window).width() < 1200) {
+			//var nav = $('#menu').html(),
+			//	btn = '<button class="burger_button">';
+			//// Cut the Nav and move it to a better position
+			//$('#mainrow').prepend(nav);
+			//$('#vert_nav').find('#menu').remove();
+			//$('#menu_wrap').prepend(btn);
+			$('.burger_button').click(function () {
+				$(this).parents('#main-menu-mobile').toggleClass('active');
+			});
+
+			$('#main-menu-links a.active').parent('li').css('background-color', 'whitesmoke');
+		}
+	}
+
+	mobileNav();
+
 });
 
 

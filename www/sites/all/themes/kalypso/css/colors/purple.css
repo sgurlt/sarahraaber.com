@@ -34,7 +34,7 @@ thead {
   border-top: 2px solid #7100cc !important;
 }
 
-#main-menu li a.active {
+#main-menu li a.active, #main-menu-mobile li a.active {
 	color: #7100cc;
 }
 
@@ -42,7 +42,7 @@ thead {
 	border-top: 2px solid #7100cc;
 }
 
-#main-menu li a:hover, #main-menu .menu ul li a:hover  {
+#main-menu li a:hover, #main-menu .menu ul li a:hover, #main-menu-mobile li a:hover, #main-menu-mobile .menu ul li a:hover  {
 	color: #7100cc;
 }
 

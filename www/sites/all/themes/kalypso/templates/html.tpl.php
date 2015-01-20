@@ -12,7 +12,6 @@
   <link href='http://fonts.googleapis.com/css?family=Tinos:400italic' rel='stylesheet' type='text/css'>
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php kalypso_user_css();
     $is_webkit = false;
