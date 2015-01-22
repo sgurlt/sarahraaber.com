@@ -4,7 +4,7 @@
 <!--[if IE 8]>    <html class="ie8 ie" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
 <!--[if gt IE 8]> <!--> <html class="" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <!--<![endif]-->
 <head>
-  <meta name="Description" content="My name is Sarah and this is my portfolio. Design, Artwork and more -  Wiesbaden">
+  <meta name="Description" content="Hey! My name is Sarah and this is my portfolio. Design, Artwork and more -  Wiesbaden">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
