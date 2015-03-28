@@ -63,9 +63,10 @@ function kalypso_footer($page){
       <script>
         var pathname = window.location.pathname;
         if(pathname == '/artwork') {
-          var container = $('.view-artwork');
-          var container2 = $('.view-artwork .view-content .field-content img');
-          $(container2).imagesLoaded(function() {
+          var container = $('.view-artwork'),
+          $container2 = $('.view-artwork .view-content .field-content img');
+          $container2.imagesLoaded(function() {
+            console.log('1');
             $('.page-artwork .view-artwork .view-content').css('opacity','1');
             $('.page-artwork .view-artwork .view-content').css('pointer-events','initial');
             $('.page-artwork .view-artwork ').css('background-image','none');
