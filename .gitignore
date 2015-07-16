@@ -9,3 +9,6 @@ sites/*/private
 
 # Ignore the Backup directory
 backup
+
+#ignore tmp
+www/tmp/
