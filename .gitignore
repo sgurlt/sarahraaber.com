@@ -12,3 +12,6 @@ backup
 
 #ignore tmp
 www/tmp/
+
+#ignore idea
+.idea/
