@@ -1,0 +1,38 @@
+<?php
+
+
+/**
+ * Implements hook_libraries_info().
+ */
+function sg_isotope_libraries_info() {
+  $libraries['imagesloaded'] = array(
+    'name' => 'Images Loaded',
+    'vendor url' => 'http://desandro.github.io/imagesloaded',
+    'download url' => 'http://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js',
+    'version arguments' => array(
+      'file' => 'imagesloaded.pkgd.min.js',
+      // imagesLoaded 3.x
+      'pattern' => '/imagesLoaded\s+PACKAGED\s+v?([0-9\.]+)/',
+      'lines' => 2,
+      'cols' => 30,
+    ),
+    'files' => array(
+      'js' => array(
+        'imagesloaded.pkgd.min.js',
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function sg_isotope_views_pre_render(&$view) {
+  if($view->human_name == 'Artwork') {
+    libraries_load('imagesloaded');
+    drupal_add_js('/sites/all/libraries/isotope/isotope.pkgd.min.js');
+    drupal_add_js(drupal_get_path('module', 'sg_isotope') . '/js/sg_isotope.js');
+  }
+}

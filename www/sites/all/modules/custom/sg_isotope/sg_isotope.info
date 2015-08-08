@@ -1,0 +1,4 @@
+name = Load Isotope library
+core = 7.x
+package = custom
+
