@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the sraaber_core feature.
  */
+
+include_once 'sraaber_core.features.inc';
