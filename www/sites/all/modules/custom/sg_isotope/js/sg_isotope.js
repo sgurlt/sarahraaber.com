@@ -7,15 +7,14 @@
       $('body').once(function() {
         var pathname = window.location.pathname;
         if(pathname == '/artwork') {
-          var container = $('.view-artwork'),
-            $container2 = $('.view-artwork .view-content .field-content img');
-            $container2.imagesLoaded(function() {
+          var container = $('.view-artwork');
+          $(container).imagesLoaded(function() {
             $('.page-artwork .view-artwork .view-content').css('opacity','1');
             $('.page-artwork .view-artwork .view-content').css('pointer-events','initial');
             $('.page-artwork .view-artwork ').css('background-image','none');
-            $('.view-artwork').isotope({
+            $(container).isotope({
               // options
-              itemSelector : '.views-row',
+              itemSelector : '.views-row'
             });
           });
 
