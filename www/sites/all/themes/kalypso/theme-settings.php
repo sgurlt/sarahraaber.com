@@ -847,5 +847,3 @@ function kalypso_slide_settings_submit($form, &$form_state) {
   $counter++;
   }
 }
-
-?>

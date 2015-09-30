@@ -282,6 +282,3 @@ function preprocess_views_view__artwork(&$vars) {
       break;
    }
 }
-
-
-?>

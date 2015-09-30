@@ -363,4 +363,3 @@ function kalypso_front_page($page){
     </div>
     <!-- end main body container -->  
 <?php }
-?>

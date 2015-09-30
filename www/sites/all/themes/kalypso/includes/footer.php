@@ -66,4 +66,3 @@ function kalypso_footer($page){
     </div>
     <!-- end footer --> 
 <?php }
-?>

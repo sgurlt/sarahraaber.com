@@ -110,4 +110,3 @@ function kalypso_header($page){
     
 </script>
 <?php }
-?>
