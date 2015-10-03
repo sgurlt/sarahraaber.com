@@ -13,28 +13,19 @@
           //  'height': '100%'
           //});
 
-          var $container = $('.view-artwork').isotope({
-            itemSelector : '.views-row'
-          });
+          var $container = $('.view-artwork');
 
-          // layout Isotope after each image loads
-          $container.imagesLoaded().progress( function() {
-            $container.isotope('layout');
+          var imgLoad = imagesLoaded($container);
+          imgLoad.on( 'always', function( instance ) {
+            setTimeout(function() {
               $('.page-artwork .view-artwork .view-content').css('opacity','1').css('pointer-events','initial');
               $('.page-artwork .view-artwork ').css('background-image','none');
+              $container.isotope({
+                // options
+                itemSelector : '.views-row'
+              });
+            }, 1000);
           });
-
-          //var imgLoad = imagesLoaded($container);
-          //imgLoad.on( 'always', function( instance ) {
-          //  $('.page-artwork .view-artwork .view-content').css('opacity','1').css('pointer-events','initial');
-          //  $('.page-artwork .view-artwork ').css('background-image','none');
-          //  $container.isotope({
-          //    // options
-          //    itemSelector : '.views-row'
-          //  });
-          //});
-
-
 
           $('#filters a').click(function(){
             var selector = $(this).attr('data-filter');
