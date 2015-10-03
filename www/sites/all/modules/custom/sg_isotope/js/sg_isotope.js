@@ -7,12 +7,6 @@
         var pathname = window.location.pathname;
         if(pathname == '/artwork') {
 
-          // Disable page scrolling to prevent layout bugs.
-          //$('html, body').css({
-          //  'overflow': 'hidden',
-          //  'height': '100%'
-          //});
-
           var $container = $('.view-artwork');
 
           var imgLoad = imagesLoaded($container);
@@ -24,6 +18,7 @@
                 // options
                 itemSelector : '.views-row'
               });
+              // We have to set a timeout to avoid layout issues.
             }, 1000);
           });
 
