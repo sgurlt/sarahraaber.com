@@ -15,3 +15,6 @@ www/tmp/
 
 #ignore idea
 .idea/
+
+#ignore backup
+../www_backup/

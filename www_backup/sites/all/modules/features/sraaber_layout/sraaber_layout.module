@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sraaber_layout feature.
+ */
+
+include_once 'sraaber_layout.features.inc';

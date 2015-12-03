@@ -1,0 +1,16 @@
+===Kalypso Changelog===
+
+1.0.2 (11/16/12)
+	*Updated to Bootstrap 2.2.1
+	*Added admin links to page template.
+	*Added a new full-width block region below the slider.
+
+1.0.1 (11/09/12)
+  *Added CSS3 fade effects on link hovers.
+  *Fixed bug with color scheme option.
+  *Changed menu dropdown indicator arrow and tweaked markup.
+  *Adjusted Drupal forum styling.
+  *General fixes.
+
+1.0 (11/08/12)
+  *Initial release.
